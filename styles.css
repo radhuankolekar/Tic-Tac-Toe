@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+  text-align: center;
+}
+
+.container {
+  width: 460px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+  padding: 40px 30px;
+  border: 2px solid #00f7ff;
+}
+
+h1 {
+  font-size: 24px;
+  color: #00f7ff;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #00f7ff;
+}
+
+.name-input {
+  margin-bottom: 20px;
+}
+
+input {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #00f7ff;
+  font-size: 14px;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #111;
+  color: #00f7ff;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 10px #00f7ff;
+}
+
+.start-btn, .restart-btn, .go-to-index-btn, .mode-btn {
+  padding: 12px 24px;
+  font-size: 14px;
+  font-family: 'Press Start 2P', cursive;
+  background-color: #00f7ff;
+  color: #000;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 10px 5px;
+  box-shadow: 0 0 10px #00f7ff;
+}
+
+.start-btn:hover, .restart-btn:hover, .go-to-index-btn:hover, .mode-btn:hover {
+  background-color: #00c9cc;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00f7ff;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 12px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  border: 3px solid #00f7ff;
+  font-size: 36px;
+  font-weight: bold;
+  color: #00f7ff;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.cell.clicked {
+  pointer-events: none;
+}
+
+.cell:hover {
+  transform: scale(1.1);
+  background-color: #333;
+}
+
+.win-cell {
+  background-color: #00f7ff;
+  color: #000;
+  animation: bounce 0.5s ease-out 1;
+  box-shadow: 0 0 15px #00f7ff;
+}
+
+@keyframes bounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+.restart-btn, .go-to-index-btn {
+  display: none;
+}
+
+.message {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #ffeb3b;
+  text-shadow: 0 0 5px #ffeb3b;
+}
+
+.winner-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00f7ff;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #00f7ff;
+}
+
+.mode-select {
+  margin-bottom: 20px;
+}

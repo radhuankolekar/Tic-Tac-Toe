@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Tic-Tac-Toe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Tic-Tac-Toe</h1>
+    <div id="modeSelection">
+      
+      <h3>Select Mode</h3>
+      <button id="humanVsHumanBtn" class="mode-btn">Human vs Human</button>
+      <button id="humanVsComputerBtn" class="mode-btn">Human vs Computer</button>
+    </div>
+    <div id="startScreen" style="display: none;">
+     
+      <div class="name-input">
+        <br>
+        <label for="playerX">Player X Name:</label>
+        <input type="text" id="playerX" placeholder="Enter Player X's name" required />
+        <div id="playerOInput">
+          <br>
+          <label for="playerO">Player O Name:</label>
+          <input type="text" id="playerO" placeholder="Enter Player O's name" required />
+        </div>
+      </div>
+      <button id="startGameBtn" class="start-btn">Start Game</button>
+    </div>
+    <div class="board" id="board" style="display: none;">
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+    </div>
+
+    <div id="message" class="message"></div>
+    <button id="restartBtn" class="restart-btn" style="display: none;">Restart Game</button>
+    <button id="goToIndexBtn" class="go-to-index-btn" style="display: none;">Home</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
